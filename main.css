@@ -4,7 +4,10 @@
 }
 
 body {
-    /* background-color: #212121!important; */
+    background-image: url(./assets/background.png);
+    background-repeat: repeat;
+    background-position: center;
+    background-color: #fff!important;
     /* color: #fff!important; */
     display: flex;
     flex-direction: column;
@@ -79,13 +82,13 @@ column {
 }
 
 .button {
-    color: #212121;
-    background-color: #fff;
-    width: 5em;
-    height: 2.5em;
+    color: #fff;
+    background-color: #212121;
+    width: 8em;
+    height: 4em;
     border: 0px;
-    border-radius: 15px;
-    font-size: 1.2em;
+    border-radius: 10px;
+    font-size: 0.5em;
 }
 
 .button:active {
@@ -95,4 +98,18 @@ column {
 .center {
     width: 100%;
     text-align: center;
+}
+
+.goto{
+    color: #fff;
+    background-color: #212121;
+    padding: 1em;
+    border-radius: 10px;
+    width: 40vh;
+    text-align: center;
+}
+
+.start{
+    justify-content: right!important;
+    height: 100%;
 }
