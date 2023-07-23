@@ -1,6 +1,7 @@
 * {
     font-family: "Space Mono", monospace;
     font-weight: bold!important;
+    outline: none!important;
 }
 
 body {
