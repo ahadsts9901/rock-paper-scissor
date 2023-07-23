@@ -143,3 +143,175 @@ column {
     justify-content: center;
     align-items: center;
 }
+
+
+/* animations */
+
+
+/* player animations */
+
+@keyframes rockAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(30deg);
+    }
+    50% {
+        transform: rotate(-30deg);
+    }
+    75% {
+        transform: rotate(20deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes paperAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-20px) rotate(-20deg);
+    }
+    50% {
+        transform: translateY(-30px) rotate(20deg);
+    }
+    75% {
+        transform: translateY(-10px) rotate(-10deg);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes scissorAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-30deg);
+    }
+    50% {
+        transform: rotate(30deg);
+    }
+    75% {
+        transform: rotate(-20deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+/* cpu animations */
+
+@keyframes cpuRockAnimation {
+    0% {
+        transform: translateY(-20px);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes cpuPaperAnimation {
+    0% {
+        transform: translateY(10px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes cpuScissorAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+/* win animation (cpu choice wins) */
+
+@keyframes animate-win {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* lose animation (player choice loses) */
+
+@keyframes animate-lose {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* apply animations */
+
+.player-bg.animate-rock {
+    animation: rockAnimation 0.5s ease-in-out;
+}
+
+.player-bg.animate-paper {
+    animation: paperAnimation 0.5s ease-in-out;
+}
+
+.player-bg.animate-scissor {
+    animation: scissorAnimation 0.5s ease-in-out;
+}
+
+.cpu-bg.animate-rock {
+    animation: cpuRockAnimation 0.5s ease-in-out;
+}
+
+.cpu-bg.animate-paper {
+    animation: cpuPaperAnimation 0.5s ease-in-out;
+}
+
+.cpu-bg.animate-scissor {
+    animation: cpuScissorAnimation 0.5s ease-in-out;
+}
+
+.player-bg.animate-win {
+    animation: animate-win 0.5s ease-in-out;
+}
+
+.player-bg.animate-lose {
+    animation: animate-lose 0.5s ease-in-out;
+}
+
+.cpu-bg.animate-win {
+    animation: animate-win 0.5s ease-in-out;
+}
+
+.cpu-bg.animate-lose {
+    animation: animate-lose 0.5s ease-in-out;
+}

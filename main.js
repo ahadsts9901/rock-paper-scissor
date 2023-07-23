@@ -10,6 +10,79 @@ function updateScores() {
     cpuScoreElement.textContent = cpuScore;
 }
 
+// button click logic
+let buttons = document.querySelectorAll('.button:not([type="reset"])');
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        let playerChoice = button.textContent;
+        playGame(playerChoice);
+    });
+});
+
+// user choice
+function playGame(playerChoice) {
+    let cpuChoice = getCpuChoice();
+    let result = determineWinner(playerChoice, cpuChoice);
+    updateScores();
+
+    // background image and animation for user
+    let playerBg = document.querySelector('.player-bg');
+    playerBg.style.backgroundImage = `url('./assets/${playerChoice.toLowerCase()}.png')`;
+
+    // remove existing animations before adding the new one
+    playerBg.classList.remove('animate-rock', 'animate-paper', 'animate-scissor', 'animate-win', 'animate-lose');
+
+    // add animation based on player's choice
+    switch (playerChoice) {
+        case 'Rock':
+            playerBg.classList.add('animate-rock');
+            break;
+        case 'Paper':
+            playerBg.classList.add('animate-paper');
+            break;
+        case 'Scissor':
+            playerBg.classList.add('animate-scissor');
+            break;
+    }
+
+    // background image and animation for CPU
+    let cpuBg = document.querySelector('.cpu-bg');
+    cpuBg.style.backgroundImage = `url('./assets/${cpuChoice.toLowerCase()}.png')`;
+
+    // remove existing animations before adding the new one
+    cpuBg.classList.remove('animate-rock', 'animate-paper', 'animate-scissor', 'animate-win', 'animate-lose');
+
+    // add animation based on CPU's choice
+    switch (cpuChoice) {
+        case 'Rock':
+            cpuBg.classList.add('animate-rock');
+            break;
+        case 'Paper':
+            cpuBg.classList.add('animate-paper');
+            break;
+        case 'Scissor':
+            cpuBg.classList.add('animate-scissor');
+            break;
+    }
+
+    // cpu win animations
+    if (
+        (playerChoice === 'Rock' && cpuChoice === 'Scissor') ||
+        (playerChoice === 'Scissor' && cpuChoice === 'Paper') ||
+        (playerChoice === 'Paper' && cpuChoice === 'Rock')
+    ) {
+        playerBg.classList.add('animate-lose');
+        cpuBg.classList.add('animate-win');
+    } else if (
+        (cpuChoice === 'Rock' && playerChoice === 'Scissor') ||
+        (cpuChoice === 'Scissor' && playerChoice === 'Paper') ||
+        (cpuChoice === 'Paper' && playerChoice === 'Rock')
+    ) {
+        playerBg.classList.add('animate-win');
+        cpuBg.classList.add('animate-lose');
+    }
+}
+
 // cpu random choice
 function getCpuChoice() {
     let choices = ['Rock', 'Paper', 'Scissor'];
@@ -51,28 +124,11 @@ function resetGame() {
     let playerBg = document.querySelector('.player-bg');
     cpuBg.style.backgroundImage = '';
     playerBg.style.backgroundImage = '';
+
+    // remove animations
+    playerBg.classList.remove('animate-rock', 'animate-paper', 'animate-scissor', 'animate-win', 'animate-lose');
+    cpuBg.classList.remove('animate-rock', 'animate-paper', 'animate-scissor', 'animate-win', 'animate-lose');
 }
-
-// user choice
-function playGame(playerChoice) {
-    let cpuChoice = getCpuChoice();
-    let result = determineWinner(playerChoice, cpuChoice);
-    updateScores();
-
-    // background image for user
-    let playerBg = document.querySelector('.player-bg');
-    playerBg.style.backgroundImage = `url('./assets/${playerChoice.toLowerCase()}.png')`;
-
-}
-
-// button click logic
-let buttons = document.querySelectorAll('.button:not([type="reset"])');
-buttons.forEach(button => {
-    button.addEventListener('click', () => {
-        let playerChoice = button.textContent;
-        playGame(playerChoice);
-    });
-});
 
 // reset
 document.querySelector('button[type="reset"]').addEventListener('click', () => {
