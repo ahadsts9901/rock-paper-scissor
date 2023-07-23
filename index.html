@@ -20,8 +20,7 @@
     <link rel="stylesheet" type="text/css" href="main.css">
     </link>
     <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 
 <body>
@@ -32,32 +31,43 @@
                 <h2 class="bi bi-three-dots-vertical dots"></h2>
             </button>
             <ul class="dropdown-menu">
-                <li class="list"><a target="_blank" href="https://github.com/ahadsts9901" class="drop-down-options"
-                        type="button"><i class="bi bi-github icon"></i>GitHub</a></li>
-                <li class="list"><a target="_blank" href="https://linkedin.com/in/muhammad-ahad-3136b1236"
-                        class="drop-down-options" type="button"><i class="bi bi-linkedin icon"></i>LinkedIn</a></li>
-                <li class="list"><a target="_blank" href="https://wa.me/+923130019086" class="drop-down-options"
-                        type="button"><i class="bi bi-whatsapp icon"></i>WhatsApp</a></li>
-                <li class="list"><a target="_blank" href="https://www.facebook.com/abdulahad.ansari.1481/"
-                        class="drop-down-options" type="button"><i class="bi bi-facebook icon"></i>Facebook</a></li>
-                <li class="list"><a target="_blank" href="https://www.youtube.com/@AhadSTS/" class="drop-down-options"
-                        type="button"><i class="bi bi-youtube icon"></i>YouTube</a></li>
+                <li class="list"><a target="_blank" href="https://github.com/ahadsts9901" class="drop-down-options" type="button"><i class="bi bi-github icon"></i>GitHub</a></li>
+                <li class="list"><a target="_blank" href="https://linkedin.com/in/muhammad-ahad-3136b1236" class="drop-down-options" type="button"><i class="bi bi-linkedin icon"></i>LinkedIn</a></li>
+                <li class="list"><a target="_blank" href="https://wa.me/+923130019086" class="drop-down-options" type="button"><i class="bi bi-whatsapp icon"></i>WhatsApp</a></li>
+                <li class="list"><a target="_blank" href="https://www.facebook.com/abdulahad.ansari.1481/" class="drop-down-options" type="button"><i class="bi bi-facebook icon"></i>Facebook</a></li>
+                <li class="list"><a target="_blank" href="https://www.youtube.com/@AhadSTS/" class="drop-down-options" type="button"><i class="bi bi-youtube icon"></i>YouTube</a></li>
             </ul>
         </div>
     </row>
     <column>
-    <a href="./player.html" class="goto"><h2>1  V  1</h2></a>
-    <a href="./computer.html" class="goto"><h2>VS C.P.U</h2></a>
+        <row>
+            <column class="start">
+                <p>A.I</p>
+                <div class="cpu-bg bg"></div>
+                <p>A.I Score:</p>
+                <p class="score cpu-score"></p>
+            </column>
+            <column class="start">
+                <p>You</p>
+                <div class="player-bg bg"></div>
+                <p>Your Score:</p>
+                <p class="score player-score"></p>
+            </column>
+        </row>
+        <row>
+            <button class="button">Rock</button>
+            <button class="button">Paper</button>
+            <button class="button">Scissor</button>
+        </row>
+        <button type="reset" class="button" style="width: 15em; font-size: 0.8em;"><i class="bi bi-arrow-clockwise"></i> Reset</button>
     </column>
     <p class="center">Thanks For Visiting Regards! Muhammad Ahad&copy;</p>
     <!-- sweet alert -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
     <!-- javascript -->
     <script src="./main.js"></script>
     <!-- bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 
 </html>

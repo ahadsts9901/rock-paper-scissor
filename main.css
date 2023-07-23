@@ -20,7 +20,15 @@ body {
     height: 100vh;
 }
 
-i, a, p, h1, h2, h3, h4, h5, h6{
+i,
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0em!important;
 }
 
@@ -32,7 +40,7 @@ i, a, p, h1, h2, h3, h4, h5, h6{
     margin: 0em;
 }
 
-.dropdown-menu.show{
+.dropdown-menu.show {
     background-color: #fff;
     color: #212121;
     border: 1px solid #212121;
@@ -44,21 +52,21 @@ i, a, p, h1, h2, h3, h4, h5, h6{
     border: 0px;
 }
 
-.list{
+.list {
     width: 8em;
     margin: 0em;
     display: inline-block;
     margin-left: 1em;
 }
 
-
-a , .list>a {
+a,
+.list>a {
     color: #212121;
     text-decoration: none!important;
-    margin: 0.5em 0.3em!important ;
+    margin: 0.5em 0.3em!important;
 }
 
-.icon{
+.icon {
     margin-right: 0.5em!important;
 }
 
@@ -84,11 +92,11 @@ column {
 .button {
     color: #fff;
     background-color: #212121;
-    width: 8em;
+    width: 6em;
     height: 4em;
     border: 0px;
     border-radius: 10px;
-    font-size: 0.5em;
+    font-size: 0.7em;
 }
 
 .button:active {
@@ -100,7 +108,7 @@ column {
     text-align: center;
 }
 
-.goto{
+.goto {
     color: #fff;
     background-color: #212121;
     padding: 1em;
@@ -109,7 +117,28 @@ column {
     text-align: center;
 }
 
-.start{
+.start {
     justify-content: right!important;
     height: 100%;
+}
+
+.bg {
+    width: 7em;
+    height: 7em;
+    /* background-color: #566181; */
+    background-position: center;
+    background-size: 100%;
+}
+
+.score {
+    width: 4em;
+    height: 2em;
+    padding: 0.3em;
+    text-align: center;
+    border-radius: 5px;
+    color: #212121;
+    background-color: #dadada;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
